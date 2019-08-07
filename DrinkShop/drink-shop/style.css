@@ -1,0 +1,60 @@
+.add-drink {
+    margin-top: 25px;
+    width: 100%;
+    display:  inline-flex;
+    justify-content: space-around;
+}
+
+#add-drink-name , #add-drink-price {
+    margin: 0 30px;
+    flex: 3;
+    padding-left: 15px;
+}
+
+#add-drink-btn {
+    flex: 1;
+    background-color: white;
+    border:  1px black solid;
+    outline: none;
+    padding: 10px;
+    margin: 0 30px;
+}
+
+#add-drink-btn:hover{
+    background-color: rgb(65, 65, 65);
+    border:  1px white solid;
+    color: white;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+#drink-list {
+    list-style: none;
+}
+
+#menu {
+    margin-top: 5%;
+}
+
+#menu h1 {
+    letter-spacing: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#menu ul {
+    padding: 0px;
+}
+
+.menu-list {
+    margin-bottom: 30px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.menu-list span {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 5px;
+}

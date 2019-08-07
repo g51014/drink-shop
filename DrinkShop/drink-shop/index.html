@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drink Shop</title>
+    <!-- web logo -->
+    <link rel="shortcut icon" href="./assets/studio.png" >
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="add-drink">
+        <input list="drink-name-list" id="add-drink-name" type="text" placeholder="品名">
+        <datalist id = 'drink-name-list'></datalist>
+        <input id="add-drink-price" type="number" min="1" placeholder="價格">
+        <button id='add-drink-btn'>新增 / 修改</button>
+    </div>
+    <div id="menu">
+        <h1>MENU</h1>
+        <ul  id="drink-list">
+            <li class="menu-list"><span>NAME</span><span>PRICE</span></li>
+            <div id="drink"></div>
+        </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./class/drink.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
