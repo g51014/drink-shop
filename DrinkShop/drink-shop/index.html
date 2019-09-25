@@ -1,29 +1,86 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Drink Shop</title>
     <!-- web logo -->
-    <link rel="shortcut icon" href="./assets/studio.png" >
+    <link rel="shortcut icon" href="./assets/studio.png">
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <div class="add-drink">
-        <input list="drink-name-list" id="add-drink-name" type="text" placeholder="品名">
-        <datalist id = 'drink-name-list'></datalist>
-        <input id="add-drink-price" type="number" min="1" placeholder="價格">
-        <button id='add-drink-btn'>新增 / 修改</button>
+    <div class="header">
+        <img src="./assets/studio.png" alt="">
+        <p>drink shop</p>
     </div>
-    <div id="menu">
-        <h1>MENU</h1>
-        <ul  id="drink-list">
-            <li class="menu-list"><span>NAME</span><span>PRICE</span></li>
-            <div id="drink"></div>
-        </ul>
+    <div class="container">
+        <!-- drink list -->
+        <div id="menu">
+            <h1>MENU</h1>
+            <ul id="drink-list">
+                <li class="menu-list"><span>NAME</span><span>PRICE</span></li>
+                <div id="drink"></div>
+            </ul>
+        </div>
+        <div id="add-drink">
+                <input list="drink-name-list" id="add-drink-name" type="text" placeholder="品名">
+                <datalist id='drink-name-list'></datalist>
+                <input id="add-drink-price" type="number" min="1" placeholder="價格">
+                <div class="btn-area">
+                    <button id='add-drink-btn' class="btn">新增 / 修改</button>
+                </div>
+            </div>
+        <!-- order -->
+        <div id="order">
+            <div class="order-option">
+                <span>product</span>
+                <select name="" id="name"></select>
+            </div>
+            <div class="order-option">
+                <span>quantity</span>
+                <input id="mount" type="number" value="0" min='0'></div>
+            <div class="order-option">
+                <span>ice</span>
+                <select name="" id="ice">
+                    <option value="0">去冰</option>
+                    <option value="1">微冰</option>
+                    <option selected value="2">正常</option>
+                </select>
+            </div>
+            <div class="order-option">
+                <span>sugar</span>
+                <select name="" id="sugar">
+                    <option value="0">無糖</option>
+                    <option value="1">少糖</option>
+                    <option selected value="2">正常</option>
+                </select>
+            </div>
+            <div class="order-option">
+                <button id="order-btn" class="btn">ORDER</button>
+            </div>
+        </div>
+        <!-- order list -->
+        <div id="order-list">
+            <div class="order-list-container">
+                <h1>detail</h1>
+                <ul id="order-detail">
+                    <li><span>id</span><span>product</span><span>ice</span><span>sugar</span><span>quantity</span><span>total</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="footer">
+            <button id='checkout-mode-btn' class="btn">切換模式</button>
+        </div>
+
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./class/drink.js"></script>
+    <script src="./class/order.js"></script>
     <script src="./main.js"></script>
 </body>
+
 </html>

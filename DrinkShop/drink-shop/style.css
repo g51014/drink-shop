@@ -1,7 +1,15 @@
-.add-drink {
-    margin-top: 25px;
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 15px;
+    min-height: 500px;
+}
+
+/*drink*/
+#add-drink {
     width: 100%;
-    display:  inline-flex;
+    display: flex;
     justify-content: space-around;
 }
 
@@ -11,16 +19,25 @@
     padding-left: 15px;
 }
 
-#add-drink-btn {
+.btn-area {
+    width: 100%;
+    display: inline-flex;
     flex: 1;
+}
+
+.btn {
     background-color: white;
     border:  1px black solid;
     outline: none;
     padding: 10px;
-    margin: 0 30px;
 }
 
-#add-drink-btn:hover{
+#add-drink-btn{
+    margin: 0 15px;
+    flex: 1;
+}
+
+.btn:hover{
     background-color: rgb(65, 65, 65);
     border:  1px white solid;
     color: white;
@@ -32,8 +49,10 @@
     list-style: none;
 }
 
+/*menu*/
 #menu {
-    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
 }
 
 #menu h1 {
@@ -57,4 +76,94 @@
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 5px;
+    max-width: 150px;
+}
+
+/*order*/
+#order {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.order-option > span {
+    margin-right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.order-option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 250px;
+}
+
+#ice, #name, #mount, #sugar, #order-btn {
+    width: 70%;
+    min-height: 39px;
+    padding-left: 15px;
+}
+
+#order-btn {
+    padding: 0;
+}
+
+#checkout-mode-btn {
+    margin: 15px 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    font-size: 30px;
+    letter-spacing: 5px;
+    padding: 50px;
+}
+
+.header > img {
+    margin-right: 15px;
+    width: 60px;
+    height: 60px;
+}
+
+.footer {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+
+/*detail*/
+
+#order-list{
+    display: none;
+    justify-content: center;
+}
+
+.order-list-container > h1 {
+    letter-spacing: 5px;
+}
+
+.order-list-container {
+    width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#order-detail {
+    margin-top: 50px;
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+}
+
+#order-detail > li {
+    border-bottom: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
